@@ -18,6 +18,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -29,9 +31,20 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
+      <div class="row">
+        <div class="col-md-2 hour">
+          5am
+        </div>
+        <div class="col-md-8 present ">
+          hello
+        </div>
+        <div class="col-md-2 saveBtn">
+          <i class="saveBtn">save</i>
+        </div>
+      </div>
       <!-- Timeblocks go here -->
     </div>
-
+    <script src="./script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
