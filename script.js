@@ -1,11 +1,7 @@
-// work hours var
-var hours =[9,10,11,12,1,2,3,4,5]
+// work hours array
+var hours =["9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm"]
 // handle for html elemt for date
 var date = $("#currentDay");
-// handle for row container
-var rows = $(".container");
-// create row div
-
 // set todays date at top of page
 var currentDate = moment().format('dddd, MMMM Do YYYY');
 date.append(currentDate);
@@ -14,25 +10,24 @@ for(var i =0; i<hours.length;i++){
 // create row for line info
 var rowEl = $("<div>");
 rowEl.addClass("row")
-rows.append(rowEl)
+$(".container").append(rowEl)
 // create hour block
 var hour = $("<div>");
-hour.addClass("col-md-2 hour");
-if(hours >12){
-hour.text(hours[i]+"Am");
+hour.addClass("col-1 hour");
+hour.text(hours[i])
 rowEl.append(hour)
-}else{
-hour.text(hours[i]+"Pm");
-rowEl.append(hour)
-}
 // create description block
-var description = $("<div>");
-description.addClass("col-md-8 present")
+var description = $("<textarea>");
+description.addClass("col-10 description");
 description.text("Hello")
 rowEl.append(description);
 // create savebutton
-var saveBtn = $("<div>");
-saveBtn.addClass("col-md-2 saveBtn")
+var saveBtn = $("<button>");
+saveBtn.addClass("col-1 saveBtn")
 rowEl.append(saveBtn)
+// create icon in button
+var saveIcon = $("<i>");
+saveIcon.addClass("fas fa-save")
+saveBtn.append(saveIcon)
 }
 
