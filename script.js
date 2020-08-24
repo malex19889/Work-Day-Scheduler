@@ -15,6 +15,7 @@ $(document).ready(function () {
     "4pm",
     "5am",
   ];
+  // array to sey ids for local storage and time eval
   var hours24 = [
      9,
      10,
